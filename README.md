@@ -17,3 +17,12 @@ Vocé está livre para utilizar o layout e a arquitetura que desejar.
 * Testes unitários.
 * Testes de inteface
 * Clean Architecture
+
+## O que será avaliado
+
+* Arquitetura escolhida.
+* Qualidade do código.
+* Abstração das diferentes camadas.
+* Adoção de boas práticas recomendadas pela Apple no uso das APIs e no visual do app.
+* Funcionamento do produto entregue.
+* Documentação do projeto.
