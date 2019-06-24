@@ -2,7 +2,7 @@
 Desafio para candidatos à vaga de Desenvolvedor iOS.
 
 ## Objetivo
-Seu desafio é criar um aplicativo utilizando a API pública do link abaixo que mostre uma lista de filmes com os detalhes de cada uma.
+Seu desafio é criar um aplicativo utilizando a API [Trakt API](http://docs.trakt.apiary.io/) que mostre uma lista de filmes com os detalhes de cada uma.
 
 Vocé está livre para utilizar o layout e a arquitetura que desejar.
 
