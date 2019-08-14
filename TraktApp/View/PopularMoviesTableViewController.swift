@@ -9,20 +9,18 @@
 import UIKit
 import NVActivityIndicatorView
 
-class PopularMoviesTableViewController: UITableViewController, PresenterDelegate {
+class PopularMoviesTableViewController: BaseViewController, PresenterDelegate {
 
     let cellId = "movieCell"
     
     var presenter: PopularMoviesPresenter!
-    private var movieList: [TraktTMDBMovie] = []
-    private var selectedMovie: TraktTMDBMovie?
-    private var overlay : UIView?
-    private var viewLoading : NVActivityIndicatorView!
+    private var movieList: [Movie] = []
+    private var selectedMovie: Movie?    
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+                
         tableView.tableFooterView = UIView()
         
         presenter = PopularMoviesPresenter(apiClient: TraktAPIClient())
@@ -30,34 +28,11 @@ class PopularMoviesTableViewController: UITableViewController, PresenterDelegate
         presenter.fetchPopularMovies()
     }
 
-    func reloadTable(movieList: TraktTMDBMovie) {
-        self.movieList.append(movieList)
+    func reloadTable(movieList: [Movie]) {
+        self.movieList.append(contentsOf: movieList)
         self.tableView.reloadData()
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieList.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MovieTableViewCell
-        
-        cell.configure(movieList[indexPath.row])
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        selectedMovie = movieList[indexPath.row]
-        performSegue(withIdentifier: "toMovieDetail", sender: self)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 176.0
-    }
-    
+           
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toMovieDetail") {
             if let dest = segue.destination as? MovieDetailViewController {
@@ -67,42 +42,27 @@ class PopularMoviesTableViewController: UITableViewController, PresenterDelegate
     }
 }
 
-extension PopularMoviesTableViewController {
-
-    func showLoading() {
-
-        if  let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-            let window = appDelegate.window {
-            overlay = UIView(frame: window.frame)
-            
-            let viewLoadingYesCgRect = CGRect(x: 0, y: 0, width: window.frame.size.width * 0.150, height: window.frame.size.width * 0.150)
-            viewLoading = NVActivityIndicatorView(frame: viewLoadingYesCgRect, type: .circleStrokeSpin, color: UIColor.red, padding: 0.5)
-            
-            overlay!.center = CGPoint(x: window.frame.width*0.5, y: window.frame.height*0.5)
-            overlay!.backgroundColor = UIColor.white
-            overlay!.alpha = 0.8
-            
-            if (self.navigationController?.isNavigationBarHidden == false) {
-                viewLoading.center = CGPoint(x: window.frame.width*0.5, y: window.frame.height*0.5-64)
-            } else {
-                viewLoading.center = CGPoint(x: window.frame.width*0.5, y: window.frame.height*0.5-20)
-            }
-            
-            overlay!.addSubview(viewLoading)
-            viewLoading.startAnimating()
-        }
-        
-        if (!(overlay?.isDescendant(of: view))!){
-            view.addSubview(overlay!)
-        }
-        
+extension PopularMoviesTableViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movieList.count
     }
     
-    func hideLoading() {
-        if (overlay != nil){
-            self.viewLoading.stopAnimating()
-            overlay!.removeFromSuperview()
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MovieCell
+        
+        cell.configure(movieList[indexPath.row])
+        
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        selectedMovie = movieList[indexPath.row]
+        performSegue(withIdentifier: "toMovieDetail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65.0
+    }
 }

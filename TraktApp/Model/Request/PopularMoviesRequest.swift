@@ -11,7 +11,7 @@ import Foundation
 struct PopularMovieRequest: APIRequest {
     
     var path: String {
-        return "/movies/popular?limit=100"
+        return "/movies/popular?limit=2000"
     }
     
     var mockPath: String {

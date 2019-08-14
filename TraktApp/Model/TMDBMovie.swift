@@ -14,16 +14,20 @@ struct TMDBMovie: APIResponse {
     let voteCount: Int?
     let title: String
     let backdropPath: String?
+    let posterPath: String?
     let overview: String?
     let releaseDate: String?
+    let genres: [Genre]
     
     enum CodingKeys: String, CodingKey {        
         case video
         case voteCount = "vote_count"
         case title
         case backdropPath = "backdrop_path"
+        case posterPath = "poster_path"
         case overview
-        case releaseDate = "release_date"        
+        case releaseDate = "release_date"
+        case genres
     }
     
     func formattedReleaseDate() -> String {

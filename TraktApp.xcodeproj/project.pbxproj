@@ -17,7 +17,6 @@
 		A0686D892301F550002A7283 /* PopularMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */; };
 		A0686D8D23020747002A7283 /* TMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D8C23020747002A7283 /* TMDBMovie.swift */; };
 		A0686D8F230207AA002A7283 /* TMDBMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D8E230207AA002A7283 /* TMDBMovieRequest.swift */; };
-		A0686D972303305C002A7283 /* TraktTMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D962303305C002A7283 /* TraktTMDBMovie.swift */; };
 		A0686D9A230335A0002A7283 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D99230335A0002A7283 /* GradientView.swift */; };
 		A0686D9C23034ABF002A7283 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D9B23034ABF002A7283 /* MovieDetailViewController.swift */; };
 		A07F84F222FCB21B009A3211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F84F122FCB21B009A3211 /* AppDelegate.swift */; };
@@ -27,8 +26,6 @@
 		A08BBF202301A8AB009A7F50 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BBF1F2301A8AB009A7F50 /* DataContainer.swift */; };
 		A08BBF272301D751009A7F50 /* PopularMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08BBF262301D751009A7F50 /* PopularMovies.storyboard */; };
 		A08BBF2E2301D938009A7F50 /* PopularMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BBF2D2301D938009A7F50 /* PopularMoviesTableViewController.swift */; };
-		A08BBF332301D969009A7F50 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BBF312301D969009A7F50 /* MovieTableViewCell.swift */; };
-		A08BBF342301D969009A7F50 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BBF322301D969009A7F50 /* MovieTableViewCell.xib */; };
 		A08BBF412301DAD2009A7F50 /* Apercu Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A08BBF382301DAD2009A7F50 /* Apercu Bold.otf */; };
 		A08BBF422301DAD2009A7F50 /* Apercu Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A08BBF392301DAD2009A7F50 /* Apercu Italic.otf */; };
 		A08BBF452301DAD2009A7F50 /* Apercu Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A08BBF3C2301DAD2009A7F50 /* Apercu Medium.otf */; };
@@ -50,6 +47,10 @@
 		A0A654F422FDF7D300002953 /* JSONMockGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A654F322FDF7D200002953 /* JSONMockGetter.swift */; };
 		A0A654F622FE0EC800002953 /* PopularMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = A0A654F522FE0EC800002953 /* PopularMovies.json */; };
 		A0A654F822FE169200002953 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A654F722FE169200002953 /* Result.swift */; };
+		A0DAA2252304508B00417EAE /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA2242304508B00417EAE /* MovieCell.swift */; };
+		A0DAA2272304548B00417EAE /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA2262304548B00417EAE /* MovieDetailPresenter.swift */; };
+		A0DAA229230456B400417EAE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA228230456B400417EAE /* BaseViewController.swift */; };
+		A0DAA22B2304714E00417EAE /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DAA22A2304714E00417EAE /* Genre.swift */; };
 		CEB0596B7A961650F04DB176 /* Pods_TraktAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95730E0965AF3AB0175AFF7F /* Pods_TraktAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +87,6 @@
 		A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesPresenter.swift; sourceTree = "<group>"; };
 		A0686D8C23020747002A7283 /* TMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovie.swift; sourceTree = "<group>"; };
 		A0686D8E230207AA002A7283 /* TMDBMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieRequest.swift; sourceTree = "<group>"; };
-		A0686D962303305C002A7283 /* TraktTMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktTMDBMovie.swift; sourceTree = "<group>"; };
 		A0686D99230335A0002A7283 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A0686D9B23034ABF002A7283 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		A07F84EE22FCB21B009A3211 /* TraktApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +102,6 @@
 		A08BBF1F2301A8AB009A7F50 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		A08BBF262301D751009A7F50 /* PopularMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularMovies.storyboard; sourceTree = "<group>"; };
 		A08BBF2D2301D938009A7F50 /* PopularMoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesTableViewController.swift; sourceTree = "<group>"; };
-		A08BBF312301D969009A7F50 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		A08BBF322301D969009A7F50 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		A08BBF382301DAD2009A7F50 /* Apercu Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Bold.otf"; sourceTree = "<group>"; };
 		A08BBF392301DAD2009A7F50 /* Apercu Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Italic.otf"; sourceTree = "<group>"; };
 		A08BBF3C2301DAD2009A7F50 /* Apercu Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Medium.otf"; sourceTree = "<group>"; };
@@ -125,6 +123,10 @@
 		A0A654F322FDF7D200002953 /* JSONMockGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMockGetter.swift; sourceTree = "<group>"; };
 		A0A654F522FE0EC800002953 /* PopularMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PopularMovies.json; sourceTree = "<group>"; };
 		A0A654F722FE169200002953 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A0DAA2242304508B00417EAE /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		A0DAA2262304548B00417EAE /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		A0DAA228230456B400417EAE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A0DAA22A2304714E00417EAE /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		A523B3C99D766A12018935C9 /* Pods-TraktAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3E5C98B2369C3E2F5D46AA7 /* Pods-TraktAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TraktAppUITests/Pods-TraktAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */,
+				A0DAA2262304548B00417EAE /* MovieDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				A08BBF2A2301D8C7009A7F50 /* Cells */,
 				A08BBF2D2301D938009A7F50 /* PopularMoviesTableViewController.swift */,
 				A0686D9B23034ABF002A7283 /* MovieDetailViewController.swift */,
+				A0DAA228230456B400417EAE /* BaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,8 +269,7 @@
 		A08BBF2A2301D8C7009A7F50 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A08BBF312301D969009A7F50 /* MovieTableViewCell.swift */,
-				A08BBF322301D969009A7F50 /* MovieTableViewCell.xib */,
+				A0DAA2242304508B00417EAE /* MovieCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -316,12 +319,12 @@
 		A0A654CA22FCC2BE00002953 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A0A654DE22FDA82100002953 /* Request */,
+				A0DAA22A2304714E00417EAE /* Genre.swift */,
 				A0A654CB22FCC2DD00002953 /* Movie.swift */,
 				A0A654CD22FCC3B700002953 /* PlatformId.swift */,
-				A0A654CF22FCC66900002953 /* Trending.swift */,
 				A0686D8C23020747002A7283 /* TMDBMovie.swift */,
-				A0686D962303305C002A7283 /* TraktTMDBMovie.swift */,
+				A0A654CF22FCC66900002953 /* Trending.swift */,
+				A0A654DE22FDA82100002953 /* Request */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,7 +504,6 @@
 				A08BBF492301DAD2009A7F50 /* Apercu_Regular.otf in Resources */,
 				A07F84FC22FCB21C009A3211 /* LaunchScreen.storyboard in Resources */,
 				A08BBF272301D751009A7F50 /* PopularMovies.storyboard in Resources */,
-				A08BBF342301D969009A7F50 /* MovieTableViewCell.xib in Resources */,
 				A07F84F922FCB21C009A3211 /* Assets.xcassets in Resources */,
 				A08BBF452301DAD2009A7F50 /* Apercu Medium.otf in Resources */,
 				A08BBF422301DAD2009A7F50 /* Apercu Italic.otf in Resources */,
@@ -617,18 +619,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DAA22B2304714E00417EAE /* Genre.swift in Sources */,
 				A0686D8D23020747002A7283 /* TMDBMovie.swift in Sources */,
 				A0A654D222FDA4B300002953 /* APIResponse.swift in Sources */,
+				A0DAA2252304508B00417EAE /* MovieCell.swift in Sources */,
 				A0686D832301E621002A7283 /* UIApplication+Extensions.swift in Sources */,
 				A0A654D022FCC66900002953 /* Trending.swift in Sources */,
-				A08BBF332301D969009A7F50 /* MovieTableViewCell.swift in Sources */,
 				A0A654CC22FCC2DD00002953 /* Movie.swift in Sources */,
 				A07F84F222FCB21B009A3211 /* AppDelegate.swift in Sources */,
 				A0A654E022FDA83A00002953 /* TrendingRequest.swift in Sources */,
+				A0DAA2272304548B00417EAE /* MovieDetailPresenter.swift in Sources */,
 				A0A654CE22FCC3B700002953 /* PlatformId.swift in Sources */,
 				A08BBF2E2301D938009A7F50 /* PopularMoviesTableViewController.swift in Sources */,
 				A0A654D422FDA4D400002953 /* APIRequest.swift in Sources */,
-				A0686D972303305C002A7283 /* TraktTMDBMovie.swift in Sources */,
+				A0DAA229230456B400417EAE /* BaseViewController.swift in Sources */,
 				A0A654EA22FDF0C600002953 /* PopularMoviesRequest.swift in Sources */,
 				A0A654C922FCC29600002953 /* TraktAPIClientProtocol.swift in Sources */,
 				A0686D7C2301DE91002A7283 /* UIView+Extensions.swift in Sources */,
