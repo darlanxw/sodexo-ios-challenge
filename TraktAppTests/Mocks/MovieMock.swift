@@ -17,7 +17,7 @@ internal class MovieMock {
         var movieList: [Movie] = []
         
         let ids: PlatformId = PlatformId(trakt: 1, slug: "abc", imdb: "def", tmdb: 2)
-        let movie = Movie(title: "My Test Movie", year: 2019, ids: ids)
+        let movie = Movie(title: "My Test Movie", year: 2019, ids: ids, movieDB: nil)
         
         movieList.append(movie)
         return movieList
