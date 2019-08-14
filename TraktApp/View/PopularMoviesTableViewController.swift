@@ -9,11 +9,11 @@
 import UIKit
 import NVActivityIndicatorView
 
-class PopularMoviesTableViewController: UITableViewController, ViewModelDelegate {
+class PopularMoviesTableViewController: UITableViewController, PresenterDelegate {
 
     let cellId = "movieCell"
     
-    var viewModel: PopularMoviesViewModel!
+    var presenter: PopularMoviesPresenter!
     private var movieList: [TraktTMDBMovie] = []
     private var selectedMovie: TraktTMDBMovie?
     private var overlay : UIView?
@@ -25,9 +25,9 @@ class PopularMoviesTableViewController: UITableViewController, ViewModelDelegate
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         tableView.tableFooterView = UIView()
         
-        viewModel = PopularMoviesViewModel(apiClient: TraktAPIClient())
-        viewModel.delegate = self
-        viewModel.fetchPopularMovies()
+        presenter = PopularMoviesPresenter(apiClient: TraktAPIClient())
+        presenter.delegate = self
+        presenter.fetchPopularMovies()
     }
 
     func reloadTable(movieList: TraktTMDBMovie) {

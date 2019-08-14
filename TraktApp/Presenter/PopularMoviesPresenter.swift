@@ -1,5 +1,5 @@
 //
-//  PopularMoviesViewModel.swift
+//  PopularMoviesPresenter.swift
 //  TraktApp
 //
 //  Created by objective on 12/08/19.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol ViewModelDelegate: class {
+protocol PresenterDelegate: class {
     func reloadTable(movieList: TraktTMDBMovie)
     func showLoading()
     func hideLoading()
 }
 
-class PopularMoviesViewModel {
+class PopularMoviesPresenter {
     
     var apiClient: TraktAPIClientProtocol    
     
-    weak var delegate: ViewModelDelegate?
+    weak var delegate: PresenterDelegate?
     
     init(apiClient: TraktAPIClientProtocol) {
         self.apiClient = apiClient

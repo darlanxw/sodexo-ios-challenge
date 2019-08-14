@@ -14,7 +14,7 @@
 		A0686D832301E621002A7283 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D822301E621002A7283 /* UIApplication+Extensions.swift */; };
 		A0686D852301E80D002A7283 /* TraktAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D842301E80D002A7283 /* TraktAPIClient.swift */; };
 		A0686D872301EB6C002A7283 /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0686D862301EB6C002A7283 /* MovieDetail.storyboard */; };
-		A0686D892301F550002A7283 /* PopularMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D882301F550002A7283 /* PopularMoviesViewModel.swift */; };
+		A0686D892301F550002A7283 /* PopularMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */; };
 		A0686D8D23020747002A7283 /* TMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D8C23020747002A7283 /* TMDBMovie.swift */; };
 		A0686D8F230207AA002A7283 /* TMDBMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D8E230207AA002A7283 /* TMDBMovieRequest.swift */; };
 		A0686D972303305C002A7283 /* TraktTMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0686D962303305C002A7283 /* TraktTMDBMovie.swift */; };
@@ -83,7 +83,7 @@
 		A0686D822301E621002A7283 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		A0686D842301E80D002A7283 /* TraktAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAPIClient.swift; sourceTree = "<group>"; };
 		A0686D862301EB6C002A7283 /* MovieDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
-		A0686D882301F550002A7283 /* PopularMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModel.swift; sourceTree = "<group>"; };
+		A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesPresenter.swift; sourceTree = "<group>"; };
 		A0686D8C23020747002A7283 /* TMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovie.swift; sourceTree = "<group>"; };
 		A0686D8E230207AA002A7283 /* TMDBMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieRequest.swift; sourceTree = "<group>"; };
 		A0686D962303305C002A7283 /* TraktTMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktTMDBMovie.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				A08BBF352301DAA6009A7F50 /* Resources */,
 				A08BBF252301D6C7009A7F50 /* Storyboards */,
 				A08BBF242301D139009A7F50 /* View */,
-				A08BBF232301D132009A7F50 /* ViewModel */,
+				A08BBF232301D132009A7F50 /* Presenter */,
 			);
 			path = TraktApp;
 			sourceTree = "<group>";
@@ -234,12 +234,12 @@
 			path = TraktAppUITests;
 			sourceTree = "<group>";
 		};
-		A08BBF232301D132009A7F50 /* ViewModel */ = {
+		A08BBF232301D132009A7F50 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				A0686D882301F550002A7283 /* PopularMoviesViewModel.swift */,
+				A0686D882301F550002A7283 /* PopularMoviesPresenter.swift */,
 			);
-			path = ViewModel;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A08BBF242301D139009A7F50 /* View */ = {
@@ -638,7 +638,7 @@
 				A08BBF202301A8AB009A7F50 /* DataContainer.swift in Sources */,
 				A0686D852301E80D002A7283 /* TraktAPIClient.swift in Sources */,
 				A0686D9A230335A0002A7283 /* GradientView.swift in Sources */,
-				A0686D892301F550002A7283 /* PopularMoviesViewModel.swift in Sources */,
+				A0686D892301F550002A7283 /* PopularMoviesPresenter.swift in Sources */,
 				A0686D7E2301E084002A7283 /* UIImageView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
