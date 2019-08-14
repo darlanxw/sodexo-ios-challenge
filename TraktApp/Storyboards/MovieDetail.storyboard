@@ -35,8 +35,8 @@
                                                     <constraint firstAttribute="height" constant="164" id="JCh-D2-sno"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-fH-5yv">
-                                                <rect key="frame" x="172.5" y="228" width="69" height="33.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-fH-5yv">
+                                                <rect key="frame" x="16" y="228" width="382" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="Apercu-Regular" family="Apercu" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -57,8 +57,10 @@
                                             <constraint firstAttribute="trailing" secondItem="aWT-nU-LlA" secondAttribute="trailing" constant="16" id="Q2w-3L-brG"/>
                                             <constraint firstItem="VMD-fH-5yv" firstAttribute="centerX" secondItem="DBb-VU-OA2" secondAttribute="centerX" id="Ubd-bP-4QI"/>
                                             <constraint firstItem="S3m-qt-L1G" firstAttribute="top" secondItem="VMD-fH-5yv" secondAttribute="bottom" constant="32" id="WMV-aR-HdX"/>
+                                            <constraint firstAttribute="trailing" secondItem="VMD-fH-5yv" secondAttribute="trailing" constant="16" id="aYl-5Q-yYL"/>
                                             <constraint firstAttribute="trailing" secondItem="S3m-qt-L1G" secondAttribute="trailing" constant="32" id="nUw-bk-SfJ"/>
                                             <constraint firstItem="VMD-fH-5yv" firstAttribute="top" secondItem="aWT-nU-LlA" secondAttribute="bottom" constant="32" id="tzO-0a-LEO"/>
+                                            <constraint firstItem="VMD-fH-5yv" firstAttribute="leading" secondItem="DBb-VU-OA2" secondAttribute="leading" constant="16" id="vV6-tl-PKx"/>
                                         </constraints>
                                     </view>
                                 </subviews>

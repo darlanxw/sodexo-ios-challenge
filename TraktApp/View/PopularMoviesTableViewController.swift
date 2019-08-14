@@ -35,12 +35,6 @@ class PopularMoviesTableViewController: UITableViewController, ViewModelDelegate
         self.tableView.reloadData()
     }
     
-    func showError(error: String) {
-        let alert = createAlert("Warning", message: error)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -70,10 +64,6 @@ class PopularMoviesTableViewController: UITableViewController, ViewModelDelegate
                 dest.movie = selectedMovie
             }
         }
-    }
-    
-    fileprivate func createAlert(_ title : String, message : String) -> UIAlertController{
-        return UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
     }
 }
 

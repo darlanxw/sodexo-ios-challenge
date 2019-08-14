@@ -10,7 +10,6 @@ import Foundation
 
 protocol ViewModelDelegate: class {
     func reloadTable(movieList: TraktTMDBMovie)
-    func showError(error: String)
     func showLoading()
     func hideLoading()
 }
@@ -36,7 +35,7 @@ class PopularMoviesViewModel {
                 strongSelf.fetchTMDB(movieList: popMovieList)
                 break
             case .failure(let error):
-                strongSelf.delegate?.showError(error: error)
+                print(error)
                 break
             }
         }
@@ -57,7 +56,7 @@ class PopularMoviesViewModel {
                     break
                     
                 case .failure(let error):
-                    strongSelf.delegate?.showError(error: error)
+                    print(error)
                     break
                 }
             }
